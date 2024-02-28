@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    android:paddingHorizontal="16dp"
+    tools:context=".AddEditTripActivity">
+
+    <TextView
+        android:id="@+id/textViewTripName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_between_fields"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:text="TRIP NAME"
+        android:textColor="@color/text_headline"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextTripName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/edit_text_bg"
+        android:drawableLeft="@drawable/ic_trip_name"
+        android:drawablePadding="16dp"
+        android:fontFamily="sans-serif"
+        android:hint="Enter your trip name"
+        android:padding="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTripName" />
+
+    <TextView
+        android:id="@+id/textViewDestination"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_between_fields"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:text="DESTINATION"
+        android:textColor="@color/text_headline"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTripName" />
+
+    <EditText
+        android:id="@+id/editTextDestination"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/edit_text_bg"
+        android:drawableLeft="@drawable/ic_trip_destination"
+        android:drawablePadding="16dp"
+        android:fontFamily="sans-serif"
+        android:hint="Enter your destination"
+        android:padding="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewDestination" />
+
+    <TextView
+        android:id="@+id/textViewTripType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_between_fields"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:text="TRIP TYPE"
+        android:textColor="@color/text_headline"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextDestination" />
+
+    <RadioGroup
+        android:id="@+id/radioGroupTripType"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTripType">
+
+        <RadioButton
+            android:id="@+id/radioButtonCityBreak"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:buttonTint="@color/color_primary"
+            android:text="City Break" />
+
+        <RadioButton
+            android:id="@+id/radioButtonSeaSide"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:buttonTint="@color/color_primary"
+            android:checked="true"
+            android:text="Sea Side" />
+
+        <RadioButton
+            android:id="@+id/radioButtonMountains"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:buttonTint="@color/color_primary"
+            android:text="Mountains" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/textViewPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_between_fields"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:text="PRICE (EUR)"
+        android:textColor="@color/text_headline"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroupTripType" />
+
+    <SeekBar
+        android:id="@+id/seekBarPrice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:max="100"
+        android:progress="80"
+        android:progressTint="@color/color_primary"
+        android:thumbTint="@color/color_primary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewPrice" />
+
+    <LinearLayout
+        android:id="@+id/textViewsDatePicker"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_between_fields"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/seekBarPrice">
+
+        <TextView
+            android:id="@+id/textViewStartDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:text="START DATE"
+            android:textColor="@color/text_headline" />
+
+        <TextView
+            android:id="@+id/textViewEndDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:text="END DATE"
+            android:textColor="@color/text_headline" />
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/editTextStartDate"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/edit_text_bg"
+        android:fontFamily="sans-serif"
+        android:hint="Select start date"
+        android:paddingHorizontal="12dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewsDatePicker" />
+
+    <EditText
+        android:id="@+id/editTextEndDate"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/edit_text_bg"
+        android:fontFamily="sans-serif"
+        android:hint="Select end date"
+        android:paddingHorizontal="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewsDatePicker" />
+
+    <TextView
+        android:id="@+id/textViewRating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_between_fields"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:text="RATING"
+        android:textColor="@color/text_headline"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextStartDate" />
+
+    <RatingBar
+        android:id="@+id/ratingBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:isIndicator="false"
+        android:numStars="5"
+        android:progressBackgroundTint="@color/light_grey"
+        android:progressTint="@color/color_primary"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewRating" />
+
+    <Button
+        android:id="@+id/buttonGalleryPhoto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_between_fields"
+        android:background="@drawable/button_bg"
+        android:drawableLeft="@drawable/ic_photo"
+        android:drawablePadding="12dp"
+        android:fontFamily="sans-serif"
+        android:paddingHorizontal="16dp"
+        android:text="Gallery Photo"
+        android:textColor="@color/background_color"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ratingBar" />
+
+    <Button
+        android:id="@+id/buttonTakePicture"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_between_fields"
+        android:background="@drawable/button_bg"
+        android:drawableLeft="@drawable/ic_camera"
+        android:drawablePadding="12dp"
+        android:fontFamily="sans-serif"
+        android:paddingHorizontal="16dp"
+        android:text="Take Picture"
+        android:textColor="@color/background_color"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ratingBar" />
+
+    <Button
+        android:id="@+id/buttonSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_between_fields"
+        android:background="@drawable/button_bg"
+        android:fontFamily="sans-serif"
+        android:text="Save"
+        android:textColor="@color/background_color"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonGalleryPhoto" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

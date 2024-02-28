@@ -1,0 +1,37 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.AdventureAwaits" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/purple_500</item>
+        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorAccent">@color/color_primary</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/color_primary</item>
+        <item name="colorSecondaryVariant">@color/color_primary_dark</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">#000000</item>
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="Theme.AdventureAwaits.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+
+    </style>
+
+    <style name="Theme.AdventureAwaits.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.AdventureAwaits.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="Theme.App.SplashTheme" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">
+            @color/background_color
+        </item>
+        <item name="android:windowSplashscreenContent">@layout/splash_screen_layout</item>
+        <item name="windowSplashScreenAnimationDuration">500</item>
+        <item name="windowSplashScreenAnimatedIcon">@mipmap/ic_logo_foreground</item>
+        <item name="postSplashScreenTheme">@style/Theme.AdventureAwaits.NoActionBar</item>
+    </style>
+</resources>

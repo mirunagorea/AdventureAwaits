@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="CustomDatePickerDialog" parent="android:ThemeOverlay.Material.Dialog">
+        <item name="android:datePickerStyle">@style/CustomDatePicker</item>
+    </style>
+
+    <style name="CustomDatePicker" parent="@android:style/Widget.Material.Light.DatePicker">
+        <item name="android:headerBackground">@color/color_primary</item>
+        <item name="android:calendarTextColor">@color/color_primary</item>
+        <!--        <item name="android:datePickerMode">calendar</item>-->
+        <!--        <item name="android:colorControlNormal">@color/color_primary</item>-->
+        <!-- Add more custom attributes if needed -->
+        <item name="colorAccent">@color/color_primary</item>
+        <item name="android:colorAccent">@color/color_primary</item>
+    </style>
+</resources>
